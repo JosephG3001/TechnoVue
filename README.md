@@ -1,3 +1,4 @@
 Vue & Vuex CMS
 
-vue.technolibrary.co.uk
+
+http://vue.technolibrary.co.uk
