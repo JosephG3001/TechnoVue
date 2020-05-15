@@ -22,6 +22,8 @@ body {
     position: fixed;
     min-height: 100%;
     width: $sidebar-width;
+    overflow-y: auto;
+    max-height: 100%;
     background-color: $secondary-colour;
     color: $secondary-colour-text;
 
@@ -50,7 +52,7 @@ body {
     .sidebar-button a {
         cursor: pointer;
         display: block;
-        padding: 15px 25px;
+        padding: 13px 25px;
         text-align: left;
         transition: background-color ease-in-out 0.1s;
 

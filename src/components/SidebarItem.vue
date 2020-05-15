@@ -34,7 +34,9 @@ interface SidebarItemProps {
     section: Section;
 }
 
-@Component
+@Component({
+    name: "SidebarItem"
+})
 export default class SidebarItem extends Vue {
 
     @Prop({required: true})
