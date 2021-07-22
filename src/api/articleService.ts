@@ -4,9 +4,12 @@ import { showErrorToast } from '@/tools/toast';
 import { ActionContext } from 'vuex';
 import ArticleEntity from '@/classes/articleEntity';
 
+//const baseUrl = "http://api.technolibrary.co.uk/api";
+const baseUrl = "http://localhost:4001/api";
+
 export function loadSectionsFromApi(context: ActionContext<AppState, AppState>) {
     context.commit("loadingSections");
-    fetch("http://api.technolibrary.co.uk/api/Section").then(result => result.json())
+    fetch(`${baseUrl}/Section`).then(result => result.json())
     .then((result: Section[]) => { 
       result.forEach(section => section.visible = false);
       context.commit("loadedSections", result);
@@ -18,7 +21,8 @@ export function loadSectionsFromApi(context: ActionContext<AppState, AppState>) 
 
   export function loadArticlesFromApi(context: ActionContext<AppState, AppState>, id: string) {
     context.commit("loadingArticles");
-    fetch(`http://api.technolibrary.co.uk/api/articles?id=${id}`).then(result => result.json())
+
+    fetch(`${baseUrl}/articles?sectionid=${id}`).then(result => result.json())
     .then((result: ArticleEntity[]) => {       
       context.commit("loadedArticles", result);
     }).catch((error: string) => {
@@ -28,7 +32,7 @@ export function loadSectionsFromApi(context: ActionContext<AppState, AppState>) 
   }
 
   export function loadArticleFromApi(id: string): Promise<ArticleEntity | null> {
-    return fetch(`http://api.technolibrary.co.uk/api/articles?id=${id}`).then(result => result.json())
+    return fetch(`${baseUrl}/articles?id=${id}`).then(result => result.json())
     .then((result: ArticleEntity) => {
       return result;
     }).catch((error: string) => {

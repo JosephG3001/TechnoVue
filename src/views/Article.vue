@@ -15,11 +15,11 @@ import Vue from 'vue'
 import { Component, Watch } from 'vue-property-decorator';
 import store from '@/store';
 import { EModuleState } from '@/store/appstate';
-import { loadArticleFromApi } from '@/api/articleService';
 import { getArticleFromUrl, getTechAndSubsection } from '@/tools/urlExtrator';
 import ArticleEntity from '../classes/articleEntity';
 
 declare let SyntaxHighlighter: any;
+declare let Prism: any;
 
 @Component
 export default class Article extends Vue {
@@ -66,11 +66,8 @@ export default class Article extends Vue {
 
     highlight() {
         let retries = 10;
-        const tryHighlight = setTimeout(() => {
-            SyntaxHighlighter.defaults['toolbar'] = false;
-            SyntaxHighlighter.defaults['gutter'] = false;
-            SyntaxHighlighter.all();  
-            SyntaxHighlighter.highlight({gutter: false});            
+        const tryHighlight = setInterval(() => {         
+            Prism.highlightAll();
             retries--;
             if (retries === 0) {
                 clearTimeout(tryHighlight);

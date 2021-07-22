@@ -13,15 +13,15 @@
                 <i class="fab fa-linkedin top-nav-menu-item-icon"></i>
                 <span>LinkedIn</span>
             </a>
-            <a href="http://react2.technolibrary.co.uk/" target="_blank">
+            <a href="http://react2.technolibrary.co.uk/" >
                 <i _ngcontent-c2="" class="fab fa-react"></i>
                 <span>React Site</span>
             </a>
-            <a href=" http://angular.technolibrary.co.uk/" target="_blank">
+            <a href=" http://angular.technolibrary.co.uk/" >
                 <i class="fab fa-angular top-nav-menu-item-icon"></i>
                 <span>Angular Site</span>
             </a>
-            <a href="http://www.technolibrary.co.uk/" target="_blank">
+            <a href="http://www.technolibrary.co.uk/" >
                 <i class="top-nav-menu-item-icon material-icons">language</i>
                 <span>Classic MVC Site</span>
             </a>
