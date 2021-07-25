@@ -4,7 +4,7 @@ import { showErrorToast } from '@/tools/toast';
 import { ActionContext } from 'vuex';
 import ArticleEntity from '@/classes/articleEntity';
 
-const baseUrl = "http://content.technolibrary.co.uk";
+const baseUrl = "http://content.technolibrary.co.uk/api";
 //const baseUrl = "http://localhost:4001/api";
 
 export function loadSectionsFromApi(context: ActionContext<AppState, AppState>) {

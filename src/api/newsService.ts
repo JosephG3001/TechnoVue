@@ -3,7 +3,7 @@ import { AppState } from '@/store/appstate';
 import { showErrorToast } from '@/tools/toast';
 import { ActionContext } from 'vuex';
 
-const baseApi = "http://news.technolibrary.co.uk"
+const baseApi = "http://news.technolibrary.co.uk/api"
 //const baseApi = "http://localhost:4002/api"
 
 export function loadNewsFromApi(context: ActionContext<AppState, AppState>)  {
