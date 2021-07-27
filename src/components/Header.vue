@@ -17,11 +17,11 @@
                 <i _ngcontent-c2="" class="fab fa-react"></i>
                 <span>React Site</span>
             </a>
-            <a href=" http://angular.technolibrary.co.uk/" >
+            <a href=" https://angular.technolibrary.co.uk/" >
                 <i class="fab fa-angular top-nav-menu-item-icon"></i>
                 <span>Angular Site</span>
             </a>
-            <a href="http://classic.technolibrary.co.uk/" >
+            <a href="https://classic.technolibrary.co.uk/" >
                 <i class="top-nav-menu-item-icon material-icons">language</i>
                 <span>Classic MVC Site</span>
             </a>
