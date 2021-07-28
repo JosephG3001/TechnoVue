@@ -24,7 +24,7 @@ export function loadSectionsFromApi(context: ActionContext<AppState, AppState>) 
 
     fetch(`${baseUrl}/articles?sectionid=${id}`).then(result => result.json())
     .then((result: ArticleEntity[]) => {       
-      context.commit("loadedArticles", result);
+      context.commit("loadedArticles", result.filter((article) => article.visible === true));
     }).catch((error: string) => {
       showErrorToast(error);
       context.commit("loadArticlesFailed");
